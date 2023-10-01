@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: auto;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(247, 2, 2, 0.5);
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
