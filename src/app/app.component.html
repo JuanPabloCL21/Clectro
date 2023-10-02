@@ -1,9 +1,11 @@
-
+<body>
+    <script src="src/app/app.component.js"></script>
+</body>
 
 <main>
 
     <div class="contenedor__todo">
-        <!--Login hola alondra-->
+        
         <div class="caja__trasera">
 
             <div class="caja__trasera-login">
@@ -30,14 +32,17 @@
             </form>
 
             <!--Registro-->
-            <form action="" class="fromulario__register">
+            <form action="" class="formulario__register">
                 <h2>Registrarse</h2>
                 <input type="text" placeholder="Nombre">
                 <input type="text" placeholder="Apellido">
                 <input type="text" placeholder="Correo Electronico">
                 <input type="password" placeholder="Contraseña">
                 <input type="text" placeholder="Telefono">
-                <input type="checkbox" placeholder="¿Eres mayorista?">
+                
+                <label><input type="checkbox"></label>
+                <label for="Mayoristsa?">&nbsp;&nbsp;¿Eres Mayoristsa?</label>
+                <br>  <br>  
                 <button>Registrarse</button>
             </form>
 
@@ -45,4 +50,5 @@
     </div>
 
 </main>
+
 <router-outlet></router-outlet>
