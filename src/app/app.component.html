@@ -1,6 +1,6 @@
-<body>
-    <script src="src/app/app.component.js"></script>
-</body>
+
+    
+
 
 <main>
 
@@ -8,23 +8,23 @@
         
         <div class="caja__trasera">
 
-            <div class="caja__trasera-login">
+            <div [ngClass]="caja_trasera_login">
                 <h3>¿Ya tienes una cuenta?</h3>
                 <p>Inicia sesión para entrar en la página</p>
-                <button id="btn_iniciar-sesion">Iniciar Sesión</button>
+                <button id="btn_iniciar-sesion" (click)="cambiarEstilos2()">Iniciar Sesión</button>
             </div>
-            <div class="caja__trasera-register">
+            <div [ngClass]="caja_trasera_register">
                 <h3>¿Aun no tienes cuenta?</h3>
                 <p>Registrate para iniciar sesión</p>
-                <button id="btn_registrarse">Regístrarse</button>
+                <button id="btn_registrarse" (click)="cambiarEstilos()">Regístrarse</button>
             </div>
         </div>
 
         <!--Formulario de login y Registro-->
-        <div class="contenedor__login-register">
+        <div [ngClass]="contenedor_login_register">
 
             <!--Login-->
-            <form action="" class="formulario__login">
+            <form action="" [ngClass]="formulario_login">
                 <h2>Iniciar Sesión</h2>
                 <input type="text" placeholder="Correo Electronico">
                 <input type="password" placeholder="Contraseña">
@@ -32,7 +32,7 @@
             </form>
 
             <!--Registro-->
-            <form action="" class="formulario__register">
+            <form action="" [ngClass]="formulario_register">
                 <h2>Registrarse</h2>
                 <input type="text" placeholder="Nombre">
                 <input type="text" placeholder="Apellido">
@@ -50,5 +50,6 @@
     </div>
 
 </main>
+
 
 <router-outlet></router-outlet>

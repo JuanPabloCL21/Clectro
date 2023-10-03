@@ -61,7 +61,9 @@ main{
 }
 
 /*formularios*/
-.contenedor__login-register{
+
+/*Contenedor Login Register Original*/
+.clroriginal{
     display: flex;
     align-items: center;
     width: 100%;
@@ -69,10 +71,11 @@ main{
     position: relative;
     top: -185px;
     left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 
-.contenedor__login-register form{
+.clroriginal form{
     width: 100%;
     padding: 80px 20px;
     background: white;
@@ -80,7 +83,7 @@ main{
     border-radius: 20px;
 }
 
-.contenedor__login-register form h2{
+.clroriginal form h2{
     font-size: 30px;
     font-weight: 300px;
     text-align: center;
@@ -88,7 +91,7 @@ main{
     color: rgb(0, 122, 192);
 }
 
-.contenedor__login-register form input[type="text"]{
+.clroriginal form input[type="text"]{
     width: 100%;
     margin-top: 20px;
     padding: 10px;
@@ -98,7 +101,7 @@ main{
     outline: none;
 }
 
-.contenedor__login-register form input[type="password"]{
+.clroriginal form input[type="password"]{
     width: 100%;
     margin-top: 20px;
     padding: 10px;
@@ -108,7 +111,7 @@ main{
     outline: none;
 }
 
-.contenedor__login-register form input[type="checkbox"]{
+.clroriginal form input[type="checkbox"]{
     
     margin-top: 20px;
     appearance: none;
@@ -122,11 +125,11 @@ main{
     transition: 0.4s;
 }
 
-.contenedor__login-register form input:checked[type="checkbox"]{
+.clroriginal form input:checked[type="checkbox"]{
    background: rgb(0, 109, 252);
 }
 
-.contenedor__login-register form input[type="checkbox"]::after{
+.clroriginal form input[type="checkbox"]::after{
     position: absolute;
     content: "";
     width: 25px;
@@ -140,11 +143,11 @@ main{
     transition: 0.4s;
 }
 
-.contenedor__login-register form input:checked[type="checkbox"]::after{
+.clroriginal form input:checked[type="checkbox"]::after{
     left: 50%;
  }
 
-.contenedor__login-register form button{
+.clroriginal form button{
     padding: 10px 40px;
     margin-top: 40px;
     border: none;
@@ -155,14 +158,145 @@ main{
     outline: none;
 }
 
-.formulario__login{
+/*Contenedor login-register change*/
+
+.clrchange{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    top: -185px;
+    left: 450px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.clrchange form{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.clrchange form h2{
+    font-size: 30px;
+    font-weight: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 122, 192);
+}
+
+.clrchange form input[type="text"]{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.clrchange form input[type="password"]{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.clrchange form input[type="checkbox"]{
+    
+    margin-top: 20px;
+    appearance: none;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.clrchange form input:checked[type="checkbox"]{
+   background: rgb(0, 109, 252);
+}
+
+.clrchange form input[type="checkbox"]::after{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: #e7e7e7;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.clrchange form input:checked[type="checkbox"]::after{
+    left: 50%;
+ }
+
+.clrchange form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/*Formulario Login*/
+/*Formulario Login Original*/
+
+.floriginal{
     opacity: 1;
     display: block;
 }
 
-.formulario__register{
+/*Formulario Login Change*/
+.flchange{
     display: none;
 }
+
+/*Formulario Register*/
+/*Formulario Register Original*/
+.froriginal{
+    display: none;
+}
+/*Formulario Register Change*/
+.frchange{
+    display: block;
+}
+
+/*Caja trasera register*/
+/*Caja Trasera register original*/
+.ctroriginal{
+    opacity: 1;
+}
+.ctrchange{
+    opacity: 0;
+}
+
+/*Caja trasera login*/
+/*Caja trasera login original*/
+.ctloriginal{
+    opacity:0;
+    
+}
+.ctlchange{
+    opacity: 1;
+    
+}
+
 
 /*Trabajo de responsive Design*/
 @media screen and (max-width: 850px){
@@ -184,13 +318,23 @@ main{
 
     /*Formularios*/
 
-    .contenedor__login-register{
+    .clroriginal{
         top: -10px;
         left: -5px;
         margin: auto;
     }
 
-    .contenedor__login-register form{
+    .clroriginal form{
+        position: relative;
+    }
+
+    .clrchange{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .clrchange form{
         position: relative;
     }
 
